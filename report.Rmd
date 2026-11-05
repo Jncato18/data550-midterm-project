@@ -1,0 +1,43 @@
+---
+title: COVID-19 Cases in Mexico
+subtitle: Descriptive Report
+author: Julianne Cato, Ziqi Liu, & Sarah Mathew
+output: html_document
+params:
+  sex: female
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE
+)
+```
+
+## Overview
+
+This report provides a descriptive summary of COVID-19 cases among **`r params$sex`** patients in Mexico.
+
+## Table
+
+```{r descriptive-table}
+
+descriptive_table <- readRDS("output/descriptive_table.rds")
+
+knitr::kable(
+  descriptive_table,
+  caption = "Finish this after Sarah finishes table"
+)
+
+descriptive_table
+```
+
+## Figure
+
+```{r figure, fig.align = "center"}
+
+figure <- readRDS("output/figure.rds")
+
+figure
+```
