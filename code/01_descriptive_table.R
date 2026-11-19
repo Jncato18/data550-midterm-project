@@ -39,3 +39,8 @@ table1 <- data %>%
   modify_header(label = "**Comorbidities**")
 
 table1
+
+saveRDS(
+  table1,
+  file = here::here("Output", "01_descriptive_table.rds")
+)
