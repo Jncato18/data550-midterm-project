@@ -1,13 +1,12 @@
 library(dplyr)
 library(gtsummary)
 library(yaml)
-library(here)
 
 # Read configuration file
-config <- yaml::read_yaml(here::here("config.yml"))
+config <- yaml::read_yaml("config.yml")
 
 # Read dataset
-data <- read.csv(here::here("data/covid_sub.csv"))
+data <- read.csv("data/covid_sub.csv")
 
 # Filter dataset based on selected sex
 data <- data %>%
@@ -38,9 +37,4 @@ table1 <- data %>%
   bold_labels() %>%
   modify_header(label = "**Comorbidities**")
 
-table1
-
-saveRDS(
-  table1,
-  file = here::here("Output", "01_descriptive_table.rds")
-)
+saveRDS(table1, file = "output/descriptive_table.rds")
