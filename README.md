@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project generates an automated HTML report summarizing characteristics of COVID-19 patients in Mexico. The report includes a descriptive table of ??? and a figure of ???.
+This project generates an automated HTML report summarizing characteristics of COVID-19 patients in Mexico. The report includes a descriptive table summarizing the prevalence of various comorbidities and a boxplot comparing age distributions between hospitalized patients and those who returned home.
 
 The report can be customized to analyze either male or female patients and is generated using GNU Make.
 
